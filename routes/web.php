@@ -42,25 +42,25 @@ Route::middleware('auth')->group(function () {
 Route::POST('/generate-qrcode', [QRController::class, 'MakeQR'])->name('generate-QR');
 
 
-$pages = array('menu-list');
-$hotels = HotelsModel::all();
+// $pages = array('menu-list');
+// $hotels = HotelsModel::all();
 
 
-foreach ($pages as $page) {
-    foreach ($hotels as $hotel) {
-        for ($i = 1; $i <= $hotel['hotel_tables']; $i++) {
-            $hotelID = $hotel['id'];
-            global $hotelID;
-            Route::get('/' . $page . '/' . $hotel['hotel_name'] . '/' . $i .'', function () {
-                $currenturl = Route::current();
-                global $hotelID;
-                $hotels = HotelsModel::where('id', $hotelID)->get();
-                $menus = MenuModel::where('hotel_id', $hotelID)->get();
-                return view('menu-list', compact('currenturl', 'hotelID', 'hotels', 'menus'));
-            });
-        }
-    }
-}
+// foreach ($pages as $page) {
+//     foreach ($hotels as $hotel) {
+//         for ($i = 1; $i <= $hotel['hotel_tables']; $i++) {
+//             $hotelID = $hotel['id'];
+//             global $hotelID;
+//             Route::get('/' . $page . '/' . $hotel['hotel_name'] . '/' . $i .'', function () {
+//                 $currenturl = Route::current();
+//                 global $hotelID;
+//                 $hotels = HotelsModel::where('id', $hotelID)->get();
+//                 $menus = MenuModel::where('hotel_id', $hotelID)->get();
+//                 return view('menu-list', compact('currenturl', 'hotelID', 'hotels', 'menus'));
+//             });
+//         }
+//     }
+// }
 
 
 require __DIR__ . '/auth.php';

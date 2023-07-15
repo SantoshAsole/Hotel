@@ -73,7 +73,7 @@
             order: [
                 [0, 'asc']
             ],
-            
+
         });
     });
 
@@ -84,6 +84,48 @@
     $('.accordion li.active').removeClass('active');
     $(this).parent().addClass('active')
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Global Required Scripts Start -->
+<script src="{{url('public/assets/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{url('public/assets/js/datatables.min.js')}}"></script>
+<script src="{{url('public/assets/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{url('public/assets/js/buttons.flash.min.js')}}"></script>
+<script src="{{url('public/assets/js/jszip.min.js')}}"></script>
+<script src="{{url('public/assets/js/pdfmake.min.js')}}"></script>
+<script src="{{url('public/assets/js/vfs_fonts.js')}}"></script>
+<script src="{{url('public/assets/js/buttons.html5.min.js')}}"></script>
+<script src="{{url('public/assets/js/buttons.print.min.js')}}"></script>
+<script src="{{url('public/assets/js/popper.min.js')}}"></script>
+<script src="{{url('public/assets/js/select2.min.js')}}"></script>
+<script src="{{url('public/assets/js/bootstrap.min.js')}}"></script>
+<script src="{{url('public/assets/js/perfect-scrollbar.js')}}"></script>
+<script src="{{url('public/assets/js/jquery-ui.min.js')}}"></script>
+<!-- Global Required Scripts End -->
+<!-- Page Specific Scripts Start -->
+<script src="{{url('public/assets/js/jquery.steps.min.js')}}"></script>
+<script src="{{url('public/assets/js/form-wizard.js')}}"></script>
+<script src="{{url('public/assets/js/Chart.bundle.min.js')}}"></script>
+<script src="{{url('public/assets/js/sweetalert2.min.js')}}"></script>
+<script src="{{url('public/assets/js/sweet-alerts.js')}}"></script>
+<script src="{{url('public/assets/js/d3.v3.min.js')}}"></script>
+<script src="{{url('public/assets/js/topojson.v1.min.js')}}"></script>
+<script src="https://cdn.datatables.net/select/1.6.0/js/dataTables.select.min.js"></script>
+<!-- Page Specific Scripts Finish -->
+<!-- Costic core JavaScript -->
+<script src="{{url('public/assets/js/framework.js')}}"></script>
+<!-- Settings -->
+<script src="{{url('public/assets/js/settings.js')}}"></script>
 </body>
 
 </html>

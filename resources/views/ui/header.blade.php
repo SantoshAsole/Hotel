@@ -2,6 +2,44 @@
 <html lang="en">
 
 <head>
+
+    <!-- Iconic Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{url('public/assets/vendors/iconic-fonts/font-awesome/css/all.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{url('public/assets/vendors/iconic-fonts/flat-icons/flaticon.css')}}">
+    <link rel="stylesheet" href="{{url('public/assets/vendors/iconic-fonts/cryptocoins/cryptocoins.css')}}">
+    <link rel="stylesheet" href="{{url('public/assets/vendors/iconic-fonts/cryptocoins/cryptocoins-colors.css')}}">
+    <!-- Bootstrap core CSS -->
+    <link href="{{url('public/assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Select2 core CSS -->
+    <link href="{{url('public/assets/css/select2.min.css')}}" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link href="{{url('public/assets/css/jquery-ui.min.css')}}" rel="stylesheet">
+    <!-- Page Specific CSS (Slick Slider.css) -->
+    <link href="{{url('public/assets/css/slick.css')}}" rel="stylesheet">
+    <link href="{{url('public/assets/css/sweetalert2.min.css')}}" rel="stylesheet">
+    <link href="{{url('public/assets/css/datatables.min.css')}}" rel="stylesheet">
+    <link href="{{url('public/assets/css/buttons.dataTables.min.css')}}" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.6.0/css/select.dataTables.min.css" rel="stylesheet">
+    <!-- Costic styles -->
+    <link href="{{url('public/assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{url('public/assets/css/croppie.css')}}" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="{{url('public/assets/img/costic/app_icon.png')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{{url('public/assets/js/jquery-3.5.0.min.js')}}"></script>
+
+
+
+
+
+
+
+
+
+
+
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">

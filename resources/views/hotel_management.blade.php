@@ -150,15 +150,31 @@
                                                             <span class="input-group-text bg-danger text-white">Hotel
                                                                 Name</span>
                                                             <input type="text" class="form-control" name="hotel_name"
-                                                                placeholder="PATIENT FULL NAME"
+                                                                placeholder="Hotel Name"
                                                                 value="{{ $hotel['hotel_name'] }}">
+                                                        </div>
+                                                        <br>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text bg-danger text-white">Hotel
+                                                                Email</span>
+                                                            <input type="email" class="form-control" name="hotel_email"
+                                                                placeholder="Hotel Email"
+                                                                value="{{ $hotel['hotel_email'] }}">
+                                                        </div>
+                                                        <br>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text bg-danger text-white">Hotel
+                                                                Password</span>
+                                                            <input type="text" class="form-control" name="hotel_password"
+                                                                placeholder="Hotel Password"
+                                                                value="{{ $hotel['hotel_password'] }}">
                                                         </div>
                                                         <br>
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text bg-danger text-white">Hotel
                                                                 Contact</span>
                                                             <input type="text" class="form-control"
-                                                                name="hotel_contact" placeholder="PATIENT AGE"
+                                                                name="hotel_contact" placeholder="Hotel Contact No."
                                                                 value="{{ $hotel['hotel_contact'] }}">
                                                         </div>
                                                         <br>
@@ -166,7 +182,7 @@
                                                             <span class="input-group-text bg-danger text-white">Hotel
                                                                 Address</span>
                                                             <input type="text" class="form-control"
-                                                                name="hotel_address" placeholder="PATIENT PRN"
+                                                                name="hotel_address" placeholder="Hotel Address"
                                                                 value="{{ $hotel['hotel_address'] }}">
                                                         </div>
                                                         <br>
@@ -174,13 +190,13 @@
                                                             <span class="input-group-text bg-danger text-white">Hotel
                                                                 Tables</span>
                                                             <input type="text" class="form-control"
-                                                                name="hotel_tables" placeholder="FLOOR"
+                                                                name="hotel_tables" placeholder="Hotel Tables"
                                                                 value="{{ $hotel['hotel_tables'] }}">
                                                         </div>
                                                         <br>
                                                         <div>
                                                             <img style="max-width: 50px; max-height: 50px;"
-                                                                src='{{ asset('Hotel Logos/' . $hotel->hotel_logo) }}'
+                                                                src='{{ url('public/Hotel Logos/' . $hotel->hotel_logo) }}'
                                                                 class="card-img-top" alt="...">
                                                         </div>
                                                         <br>
@@ -225,14 +241,14 @@
                                                         <div class="input-group mb-3">
                                                             <input type="text" class="form-control shadow-none"
                                                                 name="qr_url" placeholder="QR Code URL"
-                                                                value="">
+                                                                value="{{ $hotel['hotel_name'] }}">
                                                         </div>
-                                                        <input type="text" name="hotel_id" value="{{$hotel['id']}}">
+                                                        <input type="hidden" name="hotel_id" value="{{$hotel['id']}}">
                                                         <br>
                                                         <div class="input-group mb-3">
                                                             <input type="text" class="form-control shadow-none"
                                                                 name="tables" placeholder="Tables"
-                                                                value="">
+                                                                value="{{ $hotel['hotel_tables'] }}">
                                                         </div>
                                                         <br>
 
@@ -258,7 +274,7 @@
                 <td>{{ $hotel['hotel_contact'] }}</td>
                 <td>{{ $hotel['hotel_address'] }}</td>
                 <td>{{ $hotel['hotel_tables'] }}</td>
-                <td><img src='{{ asset('Hotel Logos/' . $hotel->hotel_logo) }}' class="card-img-top" alt="...">
+                <td><img src='{{ url('public/Hotel Logos/' . $hotel->hotel_logo) }}' class="card-img-top" alt="...">
                 </td>
                 <td>
                     <label class="switch">
@@ -323,6 +339,18 @@
                             <span class="input-group-text bg-danger text-white">Hotel Name</span>
                             <input type="text" class="form-control shadow-none" name="hotel_name"
                                 placeholder="Hotel Name" value="">
+                        </div>
+                        <br>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-danger text-white">Hotel Email</span>
+                            <input type="email" class="form-control shadow-none" name="hotel_email"
+                                placeholder="Hotel Email" value="">
+                        </div>
+                        <br>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-danger text-white">Hotel Password</span>
+                            <input type="text" class="form-control shadow-none" name="hotel_password"
+                                placeholder="Hotel Password" value="">
                         </div>
                         <br>
                         <div class="input-group mb-3">

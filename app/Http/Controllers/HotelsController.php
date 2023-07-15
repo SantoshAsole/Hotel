@@ -30,6 +30,8 @@ class HotelsController extends Controller
         $data = $request->except('_method', '_token', 'submit');
         $request->validate([
             'hotel_name' => 'required',
+            'hotel_email' => 'required',
+            'hotel_password' => 'required',
             'hotel_contact' => 'required',
             'hotel_address' => 'required',
             'hotel_tables' => 'required',
@@ -47,6 +49,8 @@ class HotelsController extends Controller
 
         HotelsModel::create([
             'hotel_name' => $request['hotel_name'],
+            'hotel_email' => $request['hotel_email'],
+            'hotel_password' => $request['hotel_password'],
             'hotel_contact' => $request['hotel_contact'],
             'hotel_address' => $request['hotel_address'],
             'hotel_tables' => $request['hotel_tables'],
@@ -64,6 +68,8 @@ class HotelsController extends Controller
         $data = $request->except('_method', '_token', 'submit');
         $request->validate([
             'hotel_name' => 'required',
+            'hotel_email' => 'required',
+            'hotel_password' => 'required',
             'hotel_contact' => 'required',
             'hotel_address' => 'required',
             'hotel_tables' => 'required',
@@ -90,6 +96,8 @@ class HotelsController extends Controller
             ->update(
                 array(
                     'hotel_name' => $request['hotel_name'],
+                    'hotel_email' => $request['hotel_email'],
+                    'hotel_password' => $request['hotel_password'],
                     'hotel_contact' => $request['hotel_contact'],
                     'hotel_address' => $request['hotel_address'],
                     'hotel_tables' => $request['hotel_tables'],
@@ -104,6 +112,8 @@ class HotelsController extends Controller
             ->update(
                 array(
                     'hotel_name' => $request['hotel_name'],
+                    'hotel_email' => $request['hotel_email'],
+                    'hotel_password' => $request['hotel_password'],
                     'hotel_contact' => $request['hotel_contact'],
                     'hotel_address' => $request['hotel_address'],
                     'hotel_tables' => $request['hotel_tables'],
@@ -142,7 +152,7 @@ class HotelsController extends Controller
         $data = $request->qrcodeURL;
         $tables = $request->tables;
 
-        
+
       return view('qrcode', compact('data', 'tables'));
     }
 }

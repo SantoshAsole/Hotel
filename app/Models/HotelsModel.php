@@ -12,6 +12,8 @@ class HotelsModel extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'hotel_name',
+        'hotel_email',
+        'hotel_password',
         'hotel_contact',
         'hotel_address',
         'hotel_logo',
